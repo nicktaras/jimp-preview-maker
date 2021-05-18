@@ -1,0 +1,22 @@
+{
+  "name": "jimp-preview-maker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicktaras/jimp-preview-maker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicktaras/jimp-preview-maker/issues"
+  },
+  "homepage": "https://github.com/nicktaras/jimp-preview-maker#readme",
+  "dependencies": {
+    "jimp": "^0.16.1"
+  }
+}
