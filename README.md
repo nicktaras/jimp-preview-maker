@@ -1,6 +1,6 @@
 # jimp
 
-## Example repository to generate the AutographNFT
+## Example repository to generate a desired image output.
 
 ### Dev
 
@@ -9,16 +9,14 @@
 
 ## Font Installation
 
-https://www.npmjs.com/package/jimp: supports basic typography using BMFont format (.fnt).
+https://www.npmjs.com/package/jimp
 
-https://stackoverflow.com/questions/24529369/how-to-convert-ttf-to-fnt-with-fontforge
+### Steps to convert a Googlefont to .fnt
 
-Steps to convert a Googlefont to .fnt
-
-1. Goto Google Fonts and download a chosen font to disk
+1. Go to Google Fonts and download a chosen font to disk
 2. Unzip the file
-3. Download font forge
-4. Open font forge
+3. Download fontForge
+4. Open fontForge
 5. Within the application:
 6. Go to Element -> Bitmap Strikes Available.
 7. Select the 'Win' button
@@ -29,16 +27,12 @@ Steps to convert a Googlefont to .fnt
 
 FNT is a bitmap format while TTF is an outline/vector format. To get FNT output, you'll first need to create a bitmap strike or strikes. Fontforge can do this if it has been built with Freetype included:
 
-## From working with Jimp for a day:
+## learnings:
 
-Jimp looks like a great tool for creating simplistic designs as flat images. It is most likely a very powerful tool when you have understood the workflows needed to create custom designs - however, I feel this tool requires some time to learn to be able to use it to create pixel perfect designs. 
+Jimp looks like a great tool for creating simplistic designs as flat images. It is most likely a very powerful tool when you have understood the workflows needed to create custom designs.
 
-Observations:
+- The API can rotate the whole image but it seems that you cannot rotate a text single element. Perhaps multiple images should be made and stitched together?
+- The developer must select the specific font size of the font they wish to import (this takes some time and can be error prone from using fontForge)
+- The API is small and is missing some of the features you utilise with SVG, CSS, HTML. 
 
-- The API can rotate the whole image but it seems that you cannot rotate a text single element. 
-- The developer must select the specific font size of the font they wish to import, which is slightly cumbersome to the development process.
-- This tool lacks the features that you can use out of the box with CSS e.g. blur effect (which is used in the current design)
-
-Please see the documentation within the NPM package below:
-
-https://www.npmjs.com/package/jimp#writing-text
+NPM Package: `https://www.npmjs.com/package/jimp#writing-text`
