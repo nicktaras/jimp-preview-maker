@@ -1,6 +1,9 @@
 const Jimp = require('jimp');
 const fs = require('fs');
 
+// 1. Position Text 
+// 2. ...
+
 // [{
 //   title
 //   photoURL
@@ -19,6 +22,7 @@ const generateImage = async (
     Jimp.read(imageUrl),
     Jimp.loadFont(
       'https://unpkg.com/jimp@0.16.1/fonts/open-sans/open-sans-16-white/open-sans-16-white.fnt'
+      // "https://github.com/nicktaras/json_mocks/raw/main/BebasNeue-Regular-24.fnt"
     ),
     Jimp.read(data.photoURL),
   ]);
@@ -35,7 +39,11 @@ const generateImage = async (
       15,
       image.bitmap.height - 90
     )
+    .rotate( 0, false )
     .print(font, 65, image.bitmap.height - 75, `${data.name}.${data.twitterId}`)
+    .rotate( 0, false )
+    .print(font, 165, image.bitmap.height - 75, "Shamrock")
+    .rotate( 90, false )
     .pixelate(1, -200, 0, 200, 200)
     .print(
       font,
@@ -78,7 +86,8 @@ const generateImage = async (
 }
 
 generateImage(
-  "https://ethereum.org/static/c3bcc8c47890ffd2a2c329972c73d0fd/31987/ethereum-logo-portrait-black-gray.png",
+  // "https://lh3.googleusercontent.com/JLEcKv8aYGxzBDAX_7rCuQcJFwHhwMs9u4SB68zpeDJuEP8m-s_IaXSyd5dSTq_TYhKh6Tf9BoqRYOY29QYTqo9wPa18v-B-IQxU=s0",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_%28September_2014%29.svg/1200px-Google_Chrome_icon_%28September_2014%29.svg.png",
   {
     title: "Hello Ethereum",
     photoURL: "https://pbs.twimg.com/profile_images/1196498439304929281/c87NCmb0_400x400.jpg",
