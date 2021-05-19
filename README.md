@@ -1,13 +1,13 @@
 # jimp
 
-## Example repository to generate a desired image output.
+Example repository to generate a desired image output.
 
-### Dev
+#### Dev
 
 1. run `node index.js`
 2. check the image `out.png`
 
-### Font Installation - Steps to convert a Googlefont to .fnt
+#### Font Installation - Steps to convert a Googlefont to .fnt
 
 1. Go to Google Fonts and download a chosen font to disk
 2. Unzip the file
@@ -23,7 +23,7 @@
 
 FNT is a bitmap format while TTF is an outline/vector format. To get FNT output, you'll first need to create a bitmap strike or strikes. Fontforge can do this if it has been built with Freetype included:
 
-### Learnings:
+#### Learnings:
 
 Jimp looks like a great tool for creating simplistic designs as flat images. It is most likely a very powerful tool when you have understood the workflows needed to create custom designs.
 
