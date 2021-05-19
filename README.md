@@ -29,3 +29,16 @@ Steps to convert a Googlefont to .fnt
 
 FNT is a bitmap format while TTF is an outline/vector format. To get FNT output, you'll first need to create a bitmap strike or strikes. Fontforge can do this if it has been built with Freetype included:
 
+## From working with Jimp for a day:
+
+Jimp looks like a great tool for creating simplistic designs as flat images. It is most likely a very powerful tool when you have understood the workflows needed to create custom designs - however, I feel this tool requires some time to learn to be able to use it to create pixel perfect designs. 
+
+Observations:
+
+- The API can rotate the whole image but it seems that you cannot rotate a text single element. 
+- The developer must select the specific font size of the font they wish to import, which is slightly cumbersome to the development process.
+- This tool lacks the features that you can use out of the box with CSS e.g. blur effect (which is used in the current design)
+
+Please see the documentation within the NPM package below:
+
+https://www.npmjs.com/package/jimp#writing-text
